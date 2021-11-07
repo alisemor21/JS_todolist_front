@@ -20,11 +20,13 @@
           <label for="Comment">Comment</label>
           <textarea type="text" id="Comment" required />
         </div>
-      </div>
 
-      <div class="submit-btn">
+        <div class="submit-btn">
         <button class="submitBtn">Submit</button>
       </div>
+      </div>
+
+      
     </form>
   </div>
 </template>
@@ -46,6 +48,36 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.Card2 {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-weight: bolder;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: 1pc solid palevioletred;
+  border-radius: 5pc;
+  text-align: center;
+  color: black;
+  margin-top: 10px;
+  margin: 20px;
+  padding: 1pc;
+  background-color: powderblue;
+  width: 50%;
+  box-shadow: rgb(185, 133, 151) 20px 20px 20px;
+}
+
+.picture2 {
+  margin: 1pc;
+  border: 1pc solid palevioletred;
+  border-radius: 2pc;
+  background-color: pink;
+  padding: 1pc;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
 .form-field input {
   outline: none;
   border: 2px solid black;

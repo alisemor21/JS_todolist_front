@@ -10,7 +10,7 @@ const routes = [
     meta: {
       title: 'Список дел'
     },
-    component: () => import('@/Pages/HomePage.vue')
+    component: () => import('@/Pages/SpisokDelPage.vue')
   },
   {
     path: '/info',
@@ -20,14 +20,16 @@ const routes = [
     },
     component: () => import('@/Pages/InfoPage.vue')
   },
+  
   {
-    path: '/new',
-    name: 'NEW',
+    path: '/',
+    name: 'Main',
     meta: {
-      title: 'kdkdkdk'
+      title: 'MainPage'
     },
-    component: () => import('@/Pages/NewPage.vue')
+    component: () => import('@/Pages/MainPage.vue')
   }
+
 
 
 

@@ -44,6 +44,40 @@ export default {
 
 /* .form-field input:hover{ border: 2px solid rgb(91, 102, 73);}
 .form-field input:focus{border: 2px solid greenyellow;} */
+.Card1 {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-weight: bolder;
+  /*text-decoration: blink;*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: 1pc solid palevioletred;
+  border-radius: 5pc;
+  text-align: center;
+  color: black;
+  margin-top: 10px;
+  margin: 20px;
+  padding: 1pc;
+  background-color: powderblue;
+  width: 50%;
+  box-shadow: rgb(185, 133, 151) 20px 20px 20px;
+}
+
+.Card1 img:hover{width: 300px;}
+
+.picture1 {
+  margin: 1pc;
+  border: 1pc solid palevioletred;
+  border-radius: 2pc;
+  background-color: pink;
+  padding: 1pc;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Information {
+  margin-top: 100px;
+}
 
 h3 {
   margin: 40px 0 0;
