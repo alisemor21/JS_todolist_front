@@ -1,12 +1,11 @@
 <template>
   <div class="all">
 
-    <div class="Navbar">
-    <Navbar/>
-    </div>
+  <div class="Navbar">
+  <Navbar/>
+  </div>
 
   <h1>MAIN!!!</h1>
-  <h2>Scroll this page to see the effect</h2>
   <p>SOME TEXT</p>
 
   </div>

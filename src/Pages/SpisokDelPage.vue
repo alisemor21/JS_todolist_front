@@ -6,10 +6,7 @@
     </div>
 
   <h1>СПИСОК ДЕЛ</h1>
-  <h2>Scroll this page to see the effect</h2>
   <p>SOME TEXT</p>
-
-
 
 
   </div>

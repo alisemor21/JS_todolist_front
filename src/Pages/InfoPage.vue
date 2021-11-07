@@ -6,24 +6,44 @@
     </div>
 
     <div class="Cards">
-      <Card1 msg="Карточка №1" />
-      <Card2 msg="Карточка №2" />
+      <InfoCard msg="Карточка №1" />
+      <FormCard msg="Карточка №2" />
     </div>
 
   </div>
 </template>
 <script>
-import Card1 from "@/components/Card1";
-import Card2 from "@/components/Card2";
+import InfoCard from "@/components/InfoCard";
+import FormCard from "@/components/FormCard";
 import Navbar from "@/components/Navbar";
 
 
 export default {
   name: "InfoPage",
   components: {
-    Card1,
-    Card2,
+    InfoCard,
+    FormCard,
     Navbar
   },
 };
 </script>
+
+<style>
+.all {
+  margin-top: 100px ;
+  background-size: 50%;
+  background-color: wheat;
+  overflow-x: scroll;
+}
+
+
+.Cards {
+  display: flex;
+  flex-direction: row;
+  margin: 300px; 
+  width: 70%;             
+}
+
+
+</style>
+

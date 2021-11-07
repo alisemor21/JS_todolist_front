@@ -1,5 +1,5 @@
 <template>
-  <div class="Card1">
+  <div class="InfoCard">
     <div class="picture1">
       <img alt="Vue logo" src="../assets/kot.jpeg" style="width: 90%" />
     </div>
@@ -44,7 +44,7 @@ export default {
 
 /* .form-field input:hover{ border: 2px solid rgb(91, 102, 73);}
 .form-field input:focus{border: 2px solid greenyellow;} */
-.Card1 {
+.InfoCard {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   font-weight: bolder;
   /*text-decoration: blink;*/
@@ -62,7 +62,7 @@ export default {
   box-shadow: rgb(185, 133, 151) 20px 20px 20px;
 }
 
-.Card1 img:hover{width: 300px;}
+.InfoCard img:hover{width: 300px;}
 
 .picture1 {
   margin: 1pc;

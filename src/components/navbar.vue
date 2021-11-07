@@ -1,12 +1,11 @@
 <template>
-  <div class="navbar">
-  <!-- <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a> -->
+  <div class="Navbar">
 
+    <div class="Main">
     <router-link to="/">
     <h1/>ГЛАВНАЯ<h1/>
     </router-link>
+    </div>
 
     <router-link to="/info">
     <h1/>ИНФОРМАЦИЯ<h1/>
@@ -16,15 +15,13 @@
     <h1/>СПИСОК ДЕЛ<h1/>
     </router-link>
 
-    <router-view/>
-
-</div>
-
+  </div>
 
 </template>
 
+
 <style scoped>
-.navbar {
+.Navbar {
   /* overflow: hidden; */
   background-color: #333;
   position: fixed; 
@@ -34,39 +31,34 @@
   /* z-index: 100; */
 }
 
-.navbar a{
+.Navbar .Main a{
+  background: pink;
+  color: rgb(27, 27, 27);
+}
+
+.Navbar a{
   float: left;
   display: block;
-  color:palevioletred;          /*#f2f2f2;*/
+  color:palevioletred;
   text-align: center;
   padding: 24px 16px;
   text-decoration: none;
   font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
   }
 
-
-.navbar a:hover{
+.Navbar a:hover{
   background: powderblue;
   color: black;
 }
 
-.navbar a:focus{
-  background-color: palevioletred;
-  color:black
+a.router-link-exact-active{
+  background-color: rgb(27, 27, 27);
+  color: whitesmoke;
 }
 
-.navbar a:after{
-  background-color: blue;
+.router-link-active{
+  background-color: rgb(27, 27, 27);
+  color: whitesmoke;
 }
-
-.navbar a:active{
-  background-color: whitesmoke;
-}
-
-
-
-/* .navbar :target{
-  background-color: rgb(89, 71, 255);
-} */
 
 </style>
