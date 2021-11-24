@@ -15,6 +15,8 @@
     <h1/>СПИСОК ДЕЛ<h1/>
     </router-link>
 
+    
+
   </div>
 
 </template>
@@ -22,19 +24,18 @@
 
 <style scoped>
 .Navbar {
-  /* overflow: hidden; */
   background-color: #333;
   position: fixed; 
   top: 0; 
   width: 100%; 
   box-shadow: rgb(185, 133, 151) -10px 20px 40px;
-  /* z-index: 100; */
 }
 
 .Navbar .Main a{
   background: pink;
   color: rgb(27, 27, 27);
 }
+
 
 .Navbar a{
   float: left;

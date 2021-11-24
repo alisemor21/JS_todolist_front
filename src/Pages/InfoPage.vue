@@ -1,9 +1,9 @@
 <template>
   <div class="all">
 
-    <div class="Navbar">
+    <!-- <div class="Navbar">
     <Navbar/>
-    </div>
+    </div> -->
 
     <div class="Cards">
       <InfoCard msg="Карточка №1" />
@@ -15,7 +15,7 @@
 <script>
 import InfoCard from "@/components/InfoCard";
 import FormCard from "@/components/FormCard";
-import Navbar from "@/components/Navbar";
+// import Navbar from "@/components/Navbar";
 
 
 export default {
@@ -23,14 +23,13 @@ export default {
   components: {
     InfoCard,
     FormCard,
-    Navbar
+    // Navbar
   },
 };
 </script>
 
 <style>
 .all {
-  margin-top: 100px ;
   background-size: 50%;
   background-color: wheat;
   overflow-x: scroll;
@@ -40,7 +39,9 @@ export default {
 .Cards {
   display: flex;
   flex-direction: row;
-  margin: 300px; 
+  text-align: center;
+  margin-top: 10%;
+  margin-left: 15%; 
   width: 70%;             
 }
 

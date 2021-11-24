@@ -1,9 +1,9 @@
 <template>
   <div class="all">
 
-    <div class="Navbar">
+    <!-- <div class="Navbar">
     <Navbar/>
-    </div>
+    </div> -->
 
   <h1>СПИСОК ДЕЛ</h1>
   <p>SOME TEXT</p>
@@ -14,13 +14,13 @@
 
 <script>
 
-import Navbar from "@/components/Navbar";
+// import Navbar from "@/components/Navbar";
 
 
 export default {
   name: "SpisokDelPage",
   components: {
-    Navbar
+    // Navbar
   },
 };
 </script>

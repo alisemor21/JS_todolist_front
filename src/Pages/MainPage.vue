@@ -1,9 +1,9 @@
 <template>
   <div class="all">
 
-  <div class="Navbar">
+  <!-- <div class="Navbar">
   <Navbar/>
-  </div>
+  </div> -->
 
   <h1>MAIN!!!</h1>
   <p>SOME TEXT</p>
@@ -13,14 +13,19 @@
 
 <script>
 
-import Navbar from "@/components/Navbar";
+// import Navbar from "@/components/Navbar";
 
 
 export default {
   name: "MainPage",
   components: {
-    Navbar
+    // Navbar
   },
+  async mounted(){
+    const response = fetch('https://jsonplaceholder.typicode.com/todos/1');
+    console.warn({response});
+  
+  }
 };
 </script>
 

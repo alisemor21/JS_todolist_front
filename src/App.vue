@@ -1,33 +1,26 @@
 <template>
-  <div class="all">
-
-    <!-- <div class="Navbar">
-
-    <router-link to="/">
-    <h1/>ГЛАВНАЯ<h1/>
-    </router-link>
-
-    <router-link to="/info">
-    <h1/>ИНФОРМАЦИЯ<h1/>
-    </router-link>
-
-    <router-link to="/spisok-del">
-    <h1/>СПИСОК ДЕЛ<h1/>
-    </router-link>
-
-    </div> -->
-
-    <router-view/>
+  <div id="app">
+    <div class="page-content"></div>
+    <component :is="layout">
+      <router-view/>
+    </component>
   </div>
 </template>
 
 <script>
+import MainLayout from "@/layouts/MainLayout";
+import AuthLayout from "@/layouts/AuthLayout";
 
 export default {
   name: "App",
   components: {
+    MainLayout,
+    AuthLayout,
   },
+  computed:{
+    layout(){
+      return this.$route.meta?.layout
+    }
+  }
 };
 </script>
-
-

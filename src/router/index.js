@@ -8,27 +8,49 @@ const routes = [
     path: '/spisok-del',
     name: 'Список дел',
     meta: {
-      title: 'Список дел'
+      title: 'Список дел',
+      layout:'main-layout'
     },
-    component: () => import('@/Pages/SpisokDelPage.vue')
+    component: () => import('@/pages/SpisokDelPage.vue')
   },
   {
     path: '/info',
     name: 'Информация',
     meta: {
-      title: 'Информация'
+      title: 'Информация',
+      layout:'main-layout'
     },
-    component: () => import('@/Pages/InfoPage.vue')
+    component: () => import('@/pages/InfoPage.vue')
   },
   
   {
     path: '/',
     name: 'Main',
     meta: {
-      title: 'MainPage'
+      title: 'MainPage',
+      layout:'main-layout'
     },
-    component: () => import('@/Pages/MainPage.vue')
+    component: () => import('@/pages/MainPage.vue')
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    meta: {
+      title: 'Вход',
+      layout:'auth-layout'
+    },
+    component: () => import('@/pages/LoginPage.vue')
+  },
+  {
+    path: '/registration',
+    name: 'registration',
+    meta: {
+      title: 'Регистрация',
+      layout:'auth-layout'
+    },
+    component: () => import('@/pages/RegistrationPage.vue')
   }
+
 
 
 ]
