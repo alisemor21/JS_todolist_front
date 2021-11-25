@@ -24,3 +24,12 @@ export default {
   }
 };
 </script>
+
+
+<style scoped>
+#app{
+  background-color: wheat;
+  width: 100%;
+  height: 800px;
+}
+</style>

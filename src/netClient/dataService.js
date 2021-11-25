@@ -15,3 +15,18 @@ export async function doRegister(login,password,email){
     }
 
 }
+
+export async function doLogin(login,password){
+
+    try{
+        const response = await http.post('auth/login',{
+            login,
+            password,
+        })
+        return response.data;
+    }catch(error){
+        console.error({error})
+        throw error;
+    }
+
+}

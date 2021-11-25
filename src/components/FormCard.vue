@@ -22,11 +22,9 @@
         </div>
 
         <div class="submit-btn">
-        <button class="submitBtn">Submit</button>
+          <button class="submitBtn">Submit</button>
+        </div>
       </div>
-      </div>
-
-      
     </form>
   </div>
 </template>
@@ -48,7 +46,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 .Card2 {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   font-weight: bolder;
@@ -95,13 +92,11 @@ export default {
   clear: both;
   text-align: right;
   line-height: 50px;
+  float: left;
 }
 label {
   float: left;
   padding-right: 10px;
-}
-.form-field {
-  float: left;
 }
 
 .form-field input:hover {
