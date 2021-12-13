@@ -1,6 +1,7 @@
 <template>
   <div class="all">
     <form @submit.prevent="onFormSubmit" class="registration-form auth-form">
+      {{$route.meta.title}}
       <div class="form-field">
         <label for="email">Email</label>
         <input v-model="email" id="email" type="text" required />
@@ -25,7 +26,7 @@
 </template>
 
 <script>
-import { doRegister } from "@/netClient/dataService";
+import { doRegister } from "@/netClient/authService";
 
 export default {
   name: "RegistrationPage",
@@ -60,13 +61,6 @@ export default {
 </script>
 
 <style>
-.all {
-  /* margin-top: 200px;
-  background-size: 50%;
-  background-color: wheat;
-  
-  overflow-x: scroll; */
-}
 
 .registration-form {
   font-family: Avenir, Helvetica, Arial, sans-serif;

@@ -1,9 +1,6 @@
 <template>
   <div class="all">
 
-    <!-- <div class="Navbar">
-    <Navbar/>
-    </div> -->
 
     <div class="Cards">
       <InfoCard msg="Карточка №1" />
@@ -13,9 +10,10 @@
   </div>
 </template>
 <script>
+
 import InfoCard from "@/components/InfoCard";
+
 import FormCard from "@/components/FormCard";
-// import Navbar from "@/components/Navbar";
 
 
 export default {
@@ -23,7 +21,6 @@ export default {
   components: {
     InfoCard,
     FormCard,
-    // Navbar
   },
 };
 </script>

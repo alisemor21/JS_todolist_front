@@ -1,11 +1,8 @@
 <template>
   <div class="all">
 
-    <!-- <div class="Navbar">
-    <Navbar/>
-    </div> -->
-
   <h1>СПИСОК ДЕЛ</h1>
+
   <p>SOME TEXT</p>
 
 

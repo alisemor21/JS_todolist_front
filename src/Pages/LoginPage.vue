@@ -1,6 +1,7 @@
 <template>
  <div class="all">
   <form @submit.prevent="onFormSubmit" class="login-form auth-form">
+    {{$route.meta.title}}
     <div class="form-field">
       <label for="login">Логин</label>
       <input v-model="login" id="login" type="text" required />
@@ -8,7 +9,6 @@
       <label for="password">Пароль</label>
       <input v-model="password" id="password" type="password" required />
     </div>
-
 
     <div class="submit-btn">
     <button class="submitBtn" type="submit">Войти</button>
@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import {doLogin} from '@/netClient/dataService';
+import {doLogin} from '@/netClient/authService';
 
 export default {
   name: "LoginPage",
@@ -31,20 +31,22 @@ export default {
       login:'',
       password:'',
   }),
-  components: {
-    // Navbar
-  },
+  async mounted(){},
+  
   methods:{
       async onFormSubmit(){
 
           try{
-              const data = await doLogin(this.login.trim(), this.password.trim());
-              console.warn({data});
+              const token = await doLogin(this.login.trim(), this.password.trim());
+              console.warn({token});
+              if(token){
+                  this.$router.push('/')
+              }
           }catch(error){
               console.error({error})
           }
 
-          this.$router.push('/')
+        //   this.$router.push('/')
       },
       redirect(){
           this.$router.push('/registration')
@@ -54,11 +56,6 @@ export default {
 </script>
 
 <style>
-/* .all {
-  
-  
-  
-} */
 
 .login-form{
   font-family: Avenir, Helvetica, Arial, sans-serif;

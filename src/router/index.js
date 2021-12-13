@@ -1,64 +1,79 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/spisok-del',
-    name: 'Список дел',
+    path: "/awards",
+    name: "Награды",
     meta: {
-      title: 'Список дел',
-      layout:'main-layout'
+      title: "Награды",
+      layout: "main-layout",
     },
-    component: () => import('@/pages/SpisokDelPage.vue')
+    component: () => import("@/pages/AwardsPage.vue"),
   },
   {
-    path: '/info',
-    name: 'Информация',
+    path: "/achievements",
+    name: "Достижения",
     meta: {
-      title: 'Информация',
-      layout:'main-layout'
+      title: "Достижения",
+      layout: "main-layout",
     },
-    component: () => import('@/pages/InfoPage.vue')
-  },
-  
-  {
-    path: '/',
-    name: 'Main',
-    meta: {
-      title: 'MainPage',
-      layout:'main-layout'
-    },
-    component: () => import('@/pages/MainPage.vue')
+    component: () => import("@/pages/AchievementsPage.vue"),
   },
   {
-    path: '/login',
-    name: 'Login',
+    path: "/info",
+    name: "Информация",
     meta: {
-      title: 'Вход',
-      layout:'auth-layout'
+      title: "Информация",
+      layout: "main-layout",
     },
-    component: () => import('@/pages/LoginPage.vue')
+    component: () => import("@/pages/InfoPage.vue"),
   },
-  {
-    path: '/registration',
-    name: 'registration',
-    meta: {
-      title: 'Регистрация',
-      layout:'auth-layout'
-    },
-    component: () => import('@/pages/RegistrationPage.vue')
-  }
 
-
-
-]
+  {
+    path: "/",
+    name: "Main",
+    meta: {
+      title: "MainPage",
+      layout: "main-layout",
+    },
+    component: () => import("@/pages/MainPage.vue"),
+  },
+  {
+    path: "/login",
+    name: "login",
+    meta: {
+      title: "Вход",
+      layout: "auth-layout",
+    },
+    component: () => import("@/pages/LoginPage.vue"),
+  },
+  {
+    path: "/registration",
+    name: "registration",
+    meta: {
+      title: "Регистрация",
+      layout: "auth-layout",
+    },
+    component: () => import("@/pages/RegistrationPage.vue"),
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+router.beforeEach((to, from, next) => {
+  const { accessToken } = localStorage;
+  if (accessToken || to.name === "login" || to.name === "registration") {
+    next();
+  } else {
+    next("/login");
+  }
+});
+
+export default router;

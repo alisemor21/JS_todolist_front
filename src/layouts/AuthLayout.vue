@@ -1,7 +1,7 @@
 <template>
   <div class="auth-layout">
     <h2 class="page-title"></h2>
-     {{$route.meta.title}}
+     <!-- {{$route.meta.title}} -->
     <div class="page-container">
       <router-view />
     </div>
@@ -36,11 +36,5 @@ export default {
 
 }
 
-/* .page-title {
-   margin-left: 45%;
-   text-align: center; 
-} */
-/* .h2{
-   text-align: center; 
-}  */
+
 </style>
